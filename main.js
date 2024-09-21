@@ -34,7 +34,7 @@ function obterDados(method, order) {
         // Armazenar os dados para exibir na tabela
         resultados.push({
             Tamanho: tamanhoVetor,
-            TempoExecucao: tempoExecucao.toFixed(2) + " ms",  // Tempo formatado
+            TempoExecucao: tempoExecucao,  // Tempo formatado
             Trocas: updates,
             Comparações: comparisons
         });
