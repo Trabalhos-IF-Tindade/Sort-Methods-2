@@ -1,10 +1,12 @@
 import { Vetor } from './Util/vetor.js'
 import { Heap } from './Methods/heap.js'
+import { Merge } from './Methods/merge.js'
 
 
 
 let vetor = new Vetor();
 let heap = new Heap();
+let merge = new Merge();
 
 
 function obterDados(method, order) {
@@ -28,8 +30,8 @@ function obterDados(method, order) {
             return
         }
 
-        // Executar o algoritmo da bolha e capturar o resultado
-        let { updates, comparisons, tempoExecucao } = method.heap(vector);
+        // Executar o algoritmo capturar o resultado
+        let { updates, comparisons, tempoExecucao } = method.exec(vector);
 
         // Armazenar os dados para exibir na tabela
         resultados.push({
@@ -46,8 +48,9 @@ function obterDados(method, order) {
     // Exibir os dados em formato de tabela
     console.table(resultados);
 }
+
 console.log("Heap:")
-obterDados(heap, "decrescente")
+obterDados(heap, "crescente")
 
 // console.log("Bolha Otimizada:")
 // obterDados(bolhaOtimizada, "crescente")

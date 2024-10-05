@@ -1,6 +1,6 @@
 export class Heap {
 
-    heap(arr) {
+    exec(arr) {
         let tempoInicial = performance.now();
         let updates = 0;
         let comparisons = 0; // Declarar aqui
