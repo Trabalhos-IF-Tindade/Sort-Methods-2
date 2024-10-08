@@ -43,7 +43,6 @@ export class Quick {
     quickSort(arr, 0, arr.length - 1);
     let tempoFinal = performance.now();
     let tempoExecucao = +((tempoFinal - tempoInicial).toFixed(3));
-
     return { tempoExecucao, updates, comparisons };
   }
 }

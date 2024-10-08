@@ -3,8 +3,6 @@ import { Heap } from './Methods/heap.js'
 import { Merge } from './Methods/merge.js'
 import { Quick } from './Methods/quick.js';
 
-
-
 let vetor = new Vetor();
 let heap = new Heap();
 let merge = new Merge();
@@ -51,14 +49,14 @@ function obterDados(method, order) {
     console.table(resultados);
 }
 
-console.log("Quick:")
-obterDados(quick, "crescente")
+// console.log("Quick:")
+// obterDados(quick, "crescente")
 
-console.log("Merge:")
-obterDados(merge, "crescente")
+// console.log("Merge:")
+// obterDados(merge, "aleatoria")
 
 console.log("Heap:")
-obterDados(heap, "crescente")
+obterDados(heap, "decrescente")
 
 // console.log("Inserction:")
 // obterDados(insercao, "crescente")

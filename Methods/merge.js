@@ -25,14 +25,17 @@ export class Merge {
 
             while (leftIndex < left.length && rightIndex < right.length) {
                 comparisons++; // Comparando os elementos
+                //Quando o elemento da esquerda é menor que o da direita ele já fica no mesmo local (não há trocas)
                 if (left[leftIndex] < right[rightIndex]) {
                     result.push(left[leftIndex]);
                     leftIndex++;
-                } else {
+                }
+                //Quando o da direita é menor ou igual, há troca (disso tiramos que ele não é estável)
+                else {
                     result.push(right[rightIndex]);
                     rightIndex++;
+                    updates++; // Atualização do array resultante
                 }
-                updates++; // Atualização do array resultante
             }
 
             // Concatena os elementos restantes (se houver)
@@ -45,7 +48,6 @@ export class Merge {
         sort(arr);
         let tempoFinal = performance.now();
         let tempoExecucao = +((tempoFinal - tempoInicial).toFixed(3));
-
         return { tempoExecucao, updates, comparisons };
     }
 }
